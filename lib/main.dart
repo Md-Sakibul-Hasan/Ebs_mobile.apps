@@ -41,22 +41,30 @@ class HomePage extends StatelessWidget {
     return Scaffold(
 
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Log_hour()));
-            }, child: Text("Log Hour"),style: buttonStyle,),
-            SizedBox(width: 10,),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Call_Log_Details()));
-            }, child: Text("Call Log Details"), style:buttonStyle),
-            SizedBox(width: 10,),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Call_Log()));
-            }, child: Text("Call Log"), style:buttonStyle),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(45.0),
+          child: Container(
+            height: 300,
+            width: 300,
+
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Log_hour()));
+                }, child: Text("Log Hour            "),style: buttonStyle,),
+                SizedBox(height: 20,),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Call_Log_Details()));
+                }, child: Text("Call Log Details"), style:buttonStyle),
+                SizedBox(height: 20,),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Call_Log()));
+                }, child: Text("Call Log             "), style:buttonStyle),
+              ],
+            ),
+          ),
         ),
       ),
 

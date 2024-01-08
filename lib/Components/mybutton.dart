@@ -8,7 +8,7 @@ class My_Button extends StatelessWidget {
     return Center(
       child: Container(
         padding: EdgeInsets.all(15),
-        margin: EdgeInsets.all(60),
+        margin: EdgeInsets.symmetric(horizontal: 60,vertical: 25),
         decoration: BoxDecoration(
             color: Colors.indigo, borderRadius: BorderRadius.circular(8)),
         child: Center(
